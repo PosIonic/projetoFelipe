@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Moedas Virtuais</ion-title>
+  </ion-navbar>
+  
+
+</ion-header>
+<br><br><br><br>
+
+<ion-list  >
+    
+  <ion-item *ngFor="let moeda of listaDeMoedas">
+    <ion-thumbnail item-start>
+      <img [src]="'https://s2.coinmarketcap.com/static/img/coins/32x32/' + moeda.id + '.png'">
+    </ion-thumbnail>
+    <h2>{{ moeda.rank }}. {{ moeda.name }}</h2>
+    <p>Preço: {{moeda.quotes.USD.price}}R$</p>  
+
+    
+  </ion-item>
+  
+</ion-list>
